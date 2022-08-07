@@ -1,6 +1,4 @@
 ##10757-큰 수 A+B##
-A=int(input())
-B=int(input())
+A, B =map(int,input().split())
 
-print("----결과----")
 print(A+B)
