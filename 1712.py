@@ -1,21 +1,13 @@
 ##1712-손익분기점##
-A = int(input())
-B = int(input())
-C = int(input())
+A, B, C=map(int,input().split())
+cnt=0
 
-totalCost = A
-totalIncome = 0
-salesVloume = 0
+# A + B*x < C*x
+if C!=B:
+    cnt=A/(C-B)
 
-while (totalIncome - totalCost) <= 0 :
-    if B>C:
-        break
-    salesVloume += 1
-    totalCost += B
-    totalIncome += C
-
-print("----결과----")
-if B>C:
+if cnt>0:
+    cnt += 1
+    print(int(cnt))
+else:
     print(-1)
-else :
-    print(salesVloume)
