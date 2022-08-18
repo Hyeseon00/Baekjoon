@@ -1,18 +1,10 @@
 ##2869-달팽이는 올라가고 싶다##
-A=int(input())
-B=int(input())
-V=int(input())
+A, B, V=map(int,input().split())
 day=0
 nowHeight=0
 
-while True:
-    if V <= nowHeight:
-        break
-    else:
-        day+=1
-        nowHeight+=A
-        if V > nowHeight:
-            nowHeight-=B
-            
-print("----결과----")
-print(day)
+while (V-A)>nowHeight: #마지막 날에는 A만큼 올라가고 밤에 떨어지지 않음.
+    day+=1
+    nowHeight+=(A-B)
+
+print(day+1)
